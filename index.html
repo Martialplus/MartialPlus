@@ -22,21 +22,22 @@
       position: relative;
     }
 
-    .telegram-btn {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background-color: #0088cc;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      transition: background-color 0.3s;
-    }
+.telegram-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: #0088cc;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
 
     .telegram-btn:hover {
       background-color: #006c9c;
@@ -122,6 +123,22 @@
     a {
       color: #00ffc8;
     }
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 600px) {
+  .telegram-btn {
+    position: static;
+    margin-bottom: 1rem;
+    justify-content: center;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -152,7 +169,7 @@
         Puedes ver tráilers, leer descripciones y disfrutar del contenido sin interrupciones.
       </p>
       <p>
-        La app es gratuita, no contiene anuncios molestos y está optimizada para todos los dispositivos Android. 
+        La app es totalmente gratuita, no contiene anuncios molestos y está optimizada para todos los dispositivos Android. 
         Únete a nuestra comunidad en Telegram para recibir actualizaciones, novedades y contenido exclusivo.
       </p>
     </div>
