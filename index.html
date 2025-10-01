@@ -82,6 +82,7 @@
       text-align: center;
     }
 
+    /* Estilo para pantallas anchas */
     .preview {
       margin-top: 2rem;
       max-width: 100%;
@@ -100,6 +101,8 @@
       overflow: hidden;
       margin: 1rem auto;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      display: inline-block; /* Esto hace que las imágenes estén en línea horizontalmente */
+      margin-right: 20px; /* Espaciado entre las imágenes */
     }
 
     .phone-wrapper:before {
@@ -128,6 +131,14 @@
       width: 90%;
       height: auto;
       border-radius: 10px;
+    }
+
+    /* Asegurarse de que se mantengan en una sola fila en pantallas más grandes */
+    .phone-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
     }
 
     .info-section {
@@ -203,22 +214,30 @@
   <main>
     <h2>Capturas de pantalla</h2>
 
-    <!-- Contenedor de capturas en móvil -->
-    <div class="phone-wrapper">
-      <div class="phone-screen">
-        <img src="https://i.postimg.cc/kXFFzhx7/mp12.png" alt="Preview de la app" />
+    <!-- Galería en una fila horizontal -->
+    <div class="phone-gallery">
+      <div class="phone-wrapper">
+        <div class="phone-screen">
+          <img src="https://i.postimg.cc/PJr8P6xc/Screenshot-20251001-114850.jpg" alt="Preview de la app" />
+        </div>
       </div>
-    </div>
 
-    <div class="phone-wrapper">
-      <div class="phone-screen">
-        <img src="https://i.postimg.cc/rpQffNYx/mp2.png" alt="Preview de la app" />
+      <div class="phone-wrapper">
+        <div class="phone-screen">
+          <img src="https://i.postimg.cc/tTm9NDDG/Screenshot-20251001-114824.jpg" alt="Preview de la app" />
+        </div>
       </div>
-    </div>
 
-    <div class="phone-wrapper">
-      <div class="phone-screen">
-        <img src="https://i.postimg.cc/0QjcFKL3/mp3.png" alt="Preview de la app" />
+      <div class="phone-wrapper">
+        <div class="phone-screen">
+          <img src="https://i.postimg.cc/L5w62vZ8/Screenshot-20251001-114927.jpg" alt="Preview de la app" />
+        </div>
+      </div>
+
+      <div class="phone-wrapper">
+        <div class="phone-screen">
+          <img src="https://i.postimg.cc/g2T95r80/Screenshot-20251001-114907.jpg" alt="Preview de la app" />
+        </div>
       </div>
     </div>
 
