@@ -99,10 +99,8 @@
       background-color: #000;
       border-radius: 40px;
       overflow: hidden;
-      margin: 1rem auto;
+      margin: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      display: inline-block; /* Esto hace que las imágenes estén en línea horizontalmente */
-      margin-right: 20px; /* Espaciado entre las imágenes */
     }
 
     .phone-wrapper:before {
@@ -133,7 +131,7 @@
       border-radius: 10px;
     }
 
-    /* Asegurarse de que se mantengan en una sola fila en pantallas más grandes */
+    /* Estilo para mostrar las imágenes en una fila horizontal */
     .phone-gallery {
       display: flex;
       justify-content: center;
@@ -175,23 +173,15 @@
       color: #00ffc8;
     }
 
-    /* Estilo para pantallas pequeñas */
+    /* Estilo para pantallas pequeñas (dispositivos móviles) */
     @media (max-width: 600px) {
-      .telegram-btn {
-        position: static;
-        margin-bottom: 1rem;
-        justify-content: center;
-      }
-
-      header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      .phone-gallery {
+        display: block; /* Cambiar a bloque para apilar las imágenes */
       }
 
       .phone-wrapper {
-        width: 220px;
-        height: 400px;
+        margin: 1rem auto; /* Centramos las imágenes verticalmente */
+        width: 80%; /* Ajustamos el tamaño para móviles */
       }
     }
 
@@ -214,7 +204,7 @@
   <main>
     <h2>Capturas de pantalla</h2>
 
-    <!-- Galería en una fila horizontal -->
+    <!-- Galería en una fila horizontal (pantallas grandes) -->
     <div class="phone-gallery">
       <div class="phone-wrapper">
         <div class="phone-screen">
