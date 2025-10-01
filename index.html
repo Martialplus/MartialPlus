@@ -22,22 +22,22 @@
       position: relative;
     }
 
-.telegram-btn {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: #0088cc;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  transition: background-color 0.3s;
-  z-index: 10;
-}
+    .telegram-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #0088cc;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      transition: background-color 0.3s;
+      z-index: 10;
+    }
 
     .telegram-btn:hover {
       background-color: #006c9c;
@@ -82,12 +82,53 @@
       text-align: center;
     }
 
+    /* Estilo para pantallas anchas */
     .preview {
       margin-top: 2rem;
       max-width: 100%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 255, 200, 0.3);
+    }
+
+    /* Estilo para el contenedor de las capturas de pantalla en móvil */
+    .phone-wrapper {
+      position: relative;
+      width: 280px;
+      height: 500px;
+      background-color: #000;
+      border-radius: 40px;
+      overflow: hidden;
+      margin: 1rem auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .phone-wrapper:before {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 5px;
+      background-color: #666;
+      border-radius: 10px;
+    }
+
+    .phone-screen {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .phone-screen img {
+      width: 90%;
+      height: auto;
+      border-radius: 10px;
     }
 
     .info-section {
@@ -124,20 +165,25 @@
       color: #00ffc8;
     }
 
-/* Estilo para pantallas pequeñas */
-@media (max-width: 600px) {
-  .telegram-btn {
-    position: static;
-    margin-bottom: 1rem;
-    justify-content: center;
-  }
+    /* Estilo para pantallas pequeñas */
+    @media (max-width: 600px) {
+      .telegram-btn {
+        position: static;
+        margin-bottom: 1rem;
+        justify-content: center;
+      }
 
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .phone-wrapper {
+        width: 220px;
+        height: 400px;
+      }
+    }
 
   </style>
 </head>
@@ -157,9 +203,36 @@
 
   <main>
     <h2>Capturas de pantalla</h2>
+
+    <!-- Capturas a pantalla ancha -->
     <img src="https://i.postimg.cc/kXFFzhx7/mp12.png" alt="Preview de la app" class="preview" />
     <img src="https://i.postimg.cc/rpQffNYx/mp2.png" alt="Preview de la app" class="preview" />
     <img src="https://i.postimg.cc/0QjcFKL3/mp3.png" alt="Preview de la app" class="preview" />
+
+    <!-- Capturas en formato móvil -->
+    <div class="phone-wrapper">
+      <div class="phone-screen">
+        <img src="https://i.postimg.cc/PJr8P6xc/Screenshot-20251001-114850.jpg" alt="Preview de la app" />
+      </div>
+    </div>
+
+    <div class="phone-wrapper">
+      <div class="phone-screen">
+        <img src="https://i.postimg.cc/tTm9NDDG/Screenshot-20251001-114824.jpg" alt="Preview de la app" />
+      </div>
+    </div>
+
+    <div class="phone-wrapper">
+      <div class="phone-screen">
+        <img src="https://i.postimg.cc/L5w62vZ8/Screenshot-20251001-114927.jpg" alt="Preview de la app" />
+      </div>
+    </div>
+
+    <div class="phone-wrapper">
+      <div class="phone-screen">
+        <img src="https://i.postimg.cc/g2T95r80/Screenshot-20251001-114907.jpg" alt="Preview de la app" />
+      </div>
+    </div>
 
     <div class="info-section">
       <h3>Acerca de MartialPlus</h3>
@@ -172,14 +245,4 @@
         La app es totalmente gratuita, no contiene anuncios molestos y está optimizada para todos los dispositivos Android. 
         Únete a nuestra comunidad en Telegram para recibir actualizaciones, novedades y contenido exclusivo.
       </p>
-    </div>
-  </main>
-
-  <footer>
-    © 2025 MartialPlus. Síguenos en 
-    <a href="https://t.me/MartialPlus" target="_blank">Telegram</a> | 
-    <a href="mailto:martialplus7@gmail.com">Contacto</a>
-  </footer>
-
-</body>
-</html>
+    </
